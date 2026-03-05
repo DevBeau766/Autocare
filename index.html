@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="site-title">AutoCare — Premium Autoservice</title>
+
+<!-- ══════════════════════════════════════════════
+     ▼▼▼  BEDRIJFSINSTELLINGEN — HIER AANPASSEN  ▼▼▼
+     Verander de naam hier 1x en het wordt overal
+     automatisch bijgewerkt op de hele website.
+     ══════════════════════════════════════════════ -->
+<script>
+  const BEDRIJF = {
+    naam:       "AutoCare",                          // ← Bedrijfsnaam (1x aanpassen)
+    tagline:    "Vakmanschap dat schittert",          // ← Korte slogan
+    telefoon:   "+31 (0)73 123 4567",                // ← Telefoonnummer
+    email:      "info@autocare.nl",                  // ← E-mailadres
+    adres:      "Autoweg 12, 5211 AB 's-Hertogenbosch", // ← Adres
+    kvk:        "KvK: 12345678",                     // ← KvK-nummer
+    maps_embed: "https://maps.google.com/maps?q=s-Hertogenbosch&t=&z=14&ie=UTF8&iwloc=&output=embed"
+  };
+</script>
+<!-- ════════════════════════════════════════════ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══ NAVIGATIE ══ -->
+<nav id="mainNav">
+  <a class="nav-logo" href="#" onclick="showPage('home')">
+    <span id="nav-naam"></span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a onclick="showPage('home')" class="active" id="nav-home">Home</a></li>
+    <li><a onclick="showPage('diensten')" id="nav-diensten">Diensten</a></li>
+    <li><a onclick="showPage('afspraak')" id="nav-contact">Contact & Locatie</a></li>
+  </ul>
+  <button class="nav-cta" onclick="showPage('afspraak')">Afspraak Maken</button>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+
+<!-- ══════════════════════════════════════
+     PAGINA 1 — HOME
+══════════════════════════════════════ -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-line"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Premium Autoservice — Nederland</span>
+      <h1>Uw auto.<br><em>Onze passie.</em></h1>
+      <p class="hero-sub" id="hero-sub"></p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="showPage('afspraak')">Afspraak Maken</button>
+        <button class="btn-outline" onclick="showPage('diensten')">Onze Diensten</button>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-dot"></div>
+      Scroll
+    </div>
+  </section>
+
+  <!-- STATISTIEKEN -->
+  <div class="stats">
+    <div class="stat-item">
+      <div class="stat-num">15<span>+</span></div>
+      <div class="stat-label">Jaar Ervaring</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">2800<span>+</span></div>
+      <div class="stat-label">Tevreden Klanten</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">98<span>%</span></div>
+      <div class="stat-label">Klanttevredenheid</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">10<span>k+</span></div>
+      <div class="stat-label">Voertuigen Behandeld</div>
+    </div>
+  </div>
+
+  <!-- OVER ONS -->
+  <div class="about-strip">
+    <div class="about-img"></div>
+    <div class="about-text">
+      <span class="section-eyebrow">Over Ons</span>
+      <h2 class="section-title">Vakmanschap dat <em>schittert</em></h2>
+      <p class="section-body">
+        Bij <span class="bedrijf-naam"></span> combineren we jarenlange vakkennis met de nieuwste technieken.
+        Of het nu gaat om spuitwerk, onderhoud of een complete restauratie — uw auto verlaat onze werkplaats
+        altijd in topconditie. Wij behandelen elk voertuig met de zorg en aandacht die het verdient.
+      </p>
+      <button class="btn-outline" onclick="showPage('afspraak')">Neem Contact Op</button>
+    </div>
+  </div>
+
+  <!-- DIENSTEN PREVIEW -->
+  <section class="diensten-preview">
+    <div class="section-header">
+      <span class="section-eyebrow">Wat Wij Doen</span>
+      <h2 class="section-title">Onze <em>Diensten</em></h2>
+    </div>
+    <div class="diensten-grid">
+      <div class="dienst-card" onclick="showPage('diensten')">
+        <div class="dienst-icon">🎨</div>
+        <h3>Spuiten & Lakwerk</h3>
+        <p>Van volledige spuitbeurten tot kleine reparaties. Wij gebruiken uitsluitend premium lakken voor een perfect eindresultaat.</p>
+      </div>
+      <div class="dienst-card" onclick="showPage('diensten')">
+        <div class="dienst-icon">🔧</div>
+        <h3>APK & Onderhoud</h3>
+        <p>Volledige APK-keuringen en periodiek onderhoud. Uw auto altijd veilig en betrouwbaar op de weg.</p>
+      </div>
+      <div class="dienst-card" onclick="showPage('diensten')">
+        <div class="dienst-icon">✨</div>
+        <h3>Detailing & Polish</h3>
+        <p>Professionele polijstbehandeling, wax en keramische coating voor een showroom-uitstraling.</p>
+      </div>
+      <div class="dienst-card" onclick="showPage('diensten')">
+        <div class="dienst-icon">🚗</div>
+        <h3>Carrosserie Reparatie</h3>
+        <p>Deukrooien, schadeherstel en complete carrosserie-restauraties. Wij herstellen elk soort schade.</p>
+      </div>
+      <div class="dienst-card" onclick="showPage('diensten')">
+        <div class="dienst-icon">💡</div>
+        <h3>Diagnose & Elektrisch</h3>
+        <p>Moderne uitleekapparatuur voor nauwkeurige diagnoses. Snel en accuraat, voor elk merk en type.</p>
+      </div>
+      <div class="dienst-card" onclick="showPage('diensten')">
+        <div class="dienst-icon">🛡️</div>
+        <h3>Beschermfolie</h3>
+        <p>PPF en raamfolie voor maximale bescherming van uw lak en interieur. Onzichtbaar en langdurig.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner">
+    <div>
+      <h2>Klaar voor een <em>frisse start?</em></h2>
+      <p>Maak vandaag nog een afspraak en ontdek wat <span class="bedrijf-naam"></span> voor uw auto kan betekenen.</p>
+    </div>
+    <button class="btn-primary" onclick="showPage('afspraak')">Afspraak Inplannen →</button>
+  </div>
+
+  <!-- FOOTER HOME -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3 id="footer-naam"></h3>
+        <p id="footer-tagline"></p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigatie</h4>
+        <ul>
+          <li onclick="showPage('home')">Home</li>
+          <li onclick="showPage('diensten')">Diensten</li>
+          <li onclick="showPage('afspraak')">Afspraak</li>
+          <li onclick="showPage('afspraak')">Contact</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Diensten</h4>
+        <ul>
+          <li>Spuiten & Lakwerk</li>
+          <li>APK & Onderhoud</li>
+          <li>Detailing</li>
+          <li>Carrosserie</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li id="footer-tel"></li>
+          <li id="footer-mail"></li>
+          <li id="footer-adres"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span id="footer-kvk"></span>
+      <span id="footer-copy"></span>
+    </div>
+  </footer>
+
+</div><!-- /page-home -->
+
+
+<!-- ══════════════════════════════════════
+     PAGINA 2 — DIENSTEN
+══════════════════════════════════════ -->
+<div id="page-diensten" class="page">
+
+  <div class="page-hero">
+    <div class="hero-grid"></div>
+    <div class="page-hero-content">
+      <span class="section-eyebrow">Wat Wij Aanbieden</span>
+      <h1>Onze <em>Diensten</em></h1>
+      <p>Van een kleine deuk tot een complete restauratie — <span class="bedrijf-naam"></span> heeft de expertise en middelen om uw auto te transformeren.</p>
+    </div>
+  </div>
+
+  <div class="diensten-full">
+
+    <!-- Dienst 1 -->
+    <div class="dienst-blok">
+      <div class="dienst-blok-img" style="background-image:url('images/dienst-spuiten.svg')"></div>
+      <div class="dienst-blok-body">
+        <span class="section-eyebrow">Dienst 01</span>
+        <h2>Spuiten & Lakwerk</h2>
+        <p>Wij bieden volledige spuitbeurten in elke kleur, inclusief kleurmatching op originele fabriekskleur. Ons gecertificeerd team werkt met premium tweelaagsystemen en milieuverantwoorde verven.</p>
+        <ul class="dienst-features">
+          <li>Volledige en gedeeltelijke spuitbeurten</li>
+          <li>Kleurmatching op fabriekskleur (RAL/code)</li>
+          <li>Premium vernis & beschermlagen</li>
+          <li>Schade- en roestbehandeling voor spuiten</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Dienst 2 -->
+    <div class="dienst-blok">
+      <div class="dienst-blok-img" style="background-image:url('images/dienst-onderhoud.svg')"></div>
+      <div class="dienst-blok-body">
+        <span class="section-eyebrow">Dienst 02</span>
+        <h2>APK & Onderhoud</h2>
+        <p>Snelle en betrouwbare APK-keuringen door RDW-gecertificeerde monteurs. Wij voeren ook alle periodieke onderhoudsbeurten uit conform fabrieksspecificaties.</p>
+        <ul class="dienst-features">
+          <li>APK-keuring (alle voertuigcategorieën)</li>
+          <li>Olie-, rem- en filterwissels</li>
+          <li>Distributie en koelsysteem</li>
+          <li>Banden, uitlijning & wielbalans</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Dienst 3 -->
+    <div class="dienst-blok">
+      <div class="dienst-blok-img" style="background-image:url('images/dienst-detailing.svg')"></div>
+      <div class="dienst-blok-body">
+        <span class="section-eyebrow">Dienst 03</span>
+        <h2>Detailing & Polijsten</h2>
+        <p>Geef uw auto de behandeling die hij verdient. Van een grondige wasbeurt tot een volledige keramische coating — wij zorgen voor een vlekkeloos resultaat.</p>
+        <ul class="dienst-features">
+          <li>Machine polijsten & krasverwijdering</li>
+          <li>Keramische coating (2–5 jaar garantie)</li>
+          <li>Interieurreiniging & stoomreiniging</li>
+          <li>Motorruimte reiniging</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Dienst 4 -->
+    <div class="dienst-blok">
+      <div class="dienst-blok-img" style="background-image:url('images/dienst-carrosserie.svg')"></div>
+      <div class="dienst-blok-body">
+        <span class="section-eyebrow">Dienst 04</span>
+        <h2>Carrosserie Reparatie</h2>
+        <p>Van kleine parkeerdeukjes tot grote schade na een aanrijding. Wij repareren uw carrosserie vakkundig en restitueren uw auto naar de originele staat.</p>
+        <ul class="dienst-features">
+          <li>PDR (deukrooien zonder spuiten)</li>
+          <li>Paneel- en structuurreparaties</li>
+          <li>Vervanging beschadigde onderdelen</li>
+          <li>Verzekeringsschade-afhandeling</li>
+        </ul>
+      </div>
+    </div>
+
+  </div><!-- /diensten-full -->
+
+  <!-- PRIJZEN -->
+  <section class="prijzen-section">
+    <div class="section-header">
+      <span class="section-eyebrow">Tarieven</span>
+      <h2 class="section-title">Transparante <em>Prijzen</em></h2>
+    </div>
+    <div class="prijzen-grid">
+      <div class="prijs-card">
+        <span class="prijs-naam">Basis</span>
+        <div class="prijs-bedrag"><sup>€</sup>79</div>
+        <p class="prijs-sub">Vanaf per beurt</p>
+        <ul class="prijs-lijst">
+          <li>APK Keuring</li>
+          <li>Olie Wissel</li>
+          <li>Basis Check 20 punten</li>
+          <li>Digitale Rapportage</li>
+        </ul>
+        <button class="btn-outline btn-full" onclick="showPage('afspraak')">Afspraak Maken</button>
+      </div>
+      <div class="prijs-card featured">
+        <div class="prijs-badge">Meest Gekozen</div>
+        <span class="prijs-naam">Premium</span>
+        <div class="prijs-bedrag"><sup>€</sup>249</div>
+        <p class="prijs-sub">Vanaf per beurt</p>
+        <ul class="prijs-lijst">
+          <li>Alles uit Basis</li>
+          <li>Volledige Onderhoudsbeurt</li>
+          <li>Interieur Reiniging</li>
+          <li>Banden Check & Balans</li>
+          <li>Gratis Leenauto</li>
+        </ul>
+        <button class="btn-primary btn-full" onclick="showPage('afspraak')">Afspraak Maken</button>
+      </div>
+      <div class="prijs-card">
+        <span class="prijs-naam">Luxe</span>
+        <div class="prijs-bedrag"><sup>€</sup>499</div>
+        <p class="prijs-sub">Vanaf per beurt</p>
+        <ul class="prijs-lijst">
+          <li>Alles uit Premium</li>
+          <li>Machine Polijst</li>
+          <li>Keramische Coating</li>
+          <li>Spuitbeurt (1 paneel)</li>
+          <li>2 Jaar Lak Garantie</li>
+        </ul>
+        <button class="btn-outline btn-full" onclick="showPage('afspraak')">Afspraak Maken</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER DIENSTEN -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3 id="footer-naam2"></h3>
+        <p id="footer-tagline2"></p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigatie</h4>
+        <ul>
+          <li onclick="showPage('home')">Home</li>
+          <li onclick="showPage('diensten')">Diensten</li>
+          <li onclick="showPage('afspraak')">Afspraak</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li id="footer-tel2"></li>
+          <li id="footer-mail2"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span id="footer-kvk2"></span>
+      <span id="footer-copy2"></span>
+    </div>
+  </footer>
+
+</div><!-- /page-diensten -->
+
+
+<!-- ══════════════════════════════════════
+     PAGINA 3 — AFSPRAAK & CONTACT
+══════════════════════════════════════ -->
+<div id="page-afspraak" class="page">
+  <div class="afspraak-layout">
+
+    <!-- FORMULIER -->
+    <div class="afspraak-form-side">
+      <span class="section-eyebrow">Online Inplannen</span>
+      <h2 class="form-title">Maak een <em>afspraak</em></h2>
+      <p class="form-subtitle">Vul het formulier in en wij nemen binnen 24 uur contact met u op ter bevestiging.</p>
+
+      <div id="afspraakForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Voornaam</label>
+            <input type="text" id="f-naam" placeholder="Jan">
+          </div>
+          <div class="form-group">
+            <label>Achternaam</label>
+            <input type="text" id="f-achternaam" placeholder="de Vries">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>E-mailadres</label>
+            <input type="email" id="f-email" placeholder="jan@voorbeeld.nl">
+          </div>
+          <div class="form-group">
+            <label>Telefoonnummer</label>
+            <input type="tel" id="f-tel" placeholder="+31 6 12345678">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Merk & Model</label>
+            <input type="text" id="f-auto" placeholder="BMW 3-serie">
+          </div>
+          <div class="form-group">
+            <label>Kenteken</label>
+            <input type="text" id="f-kenteken" placeholder="AB-123-C">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Gewenste Dienst</label>
+          <select id="f-dienst">
+            <option value="">— Selecteer een dienst —</option>
+            <option>Spuiten & Lakwerk</option>
+            <option>APK Keuring</option>
+            <option>Onderhoud & Service</option>
+            <option>Detailing & Polijsten</option>
+            <option>Carrosserie Reparatie</option>
+            <option>Beschermfolie (PPF)</option>
+            <option>Diagnose & Elektrisch</option>
+            <option>Anders / Overleg</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Gewenste Datum</label>
+            <input type="date" id="f-datum">
+          </div>
+          <div class="form-group">
+            <label>Voorkeurstijd</label>
+            <select id="f-tijd">
+              <option>08:00 – 10:00</option>
+              <option>10:00 – 12:00</option>
+              <option>12:00 – 14:00</option>
+              <option>14:00 – 16:00</option>
+              <option>16:00 – 18:00</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Omschrijving (optioneel)</label>
+          <textarea id="f-bericht" placeholder="Beschrijf kort wat er aan uw auto gedaan moet worden…"></textarea>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" id="f-akkoord">
+          <label for="f-akkoord">Ik ga akkoord met de privacyverklaring en het verwerken van mijn gegevens voor het inplannen van een afspraak.</label>
+        </div>
+        <button class="btn-primary btn-full" onclick="verstuurAfspraak()">Afspraak Bevestigen →</button>
+      </div>
+
+      <div class="succes-msg" id="succesBericht">
+        <div style="font-size:2.5rem;margin-bottom:16px;">✓</div>
+        <h3>Afspraak Ontvangen!</h3>
+        <p>Bedankt voor uw aanvraag. We nemen binnen 24 uur contact met u op ter bevestiging. Tot dan!</p>
+      </div>
+    </div>
+
+    <!-- CONTACTINFO + KAART -->
+    <div class="afspraak-info-side">
+      <span class="section-eyebrow">Vind Ons</span>
+      <h2 class="form-title" style="margin-bottom:32px">Locatie & <em>Contact</em></h2>
+
+      <div class="info-block">
+        <h3>Contactgegevens</h3>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <span id="contact-adres"></span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <span id="contact-tel"></span>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <span id="contact-mail"></span>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <h3>Openingstijden</h3>
+        <div class="hours-grid">
+          <div class="hours-day">Maandag – Vrijdag</div>
+          <div class="hours-time">08:00 – 18:00</div>
+          <div class="hours-day">Zaterdag</div>
+          <div class="hours-time">09:00 – 15:00</div>
+          <div class="hours-day">Zondag</div>
+          <div class="hours-time">Gesloten</div>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <h3>Locatie op de Kaart</h3>
+        <div class="map-container">
+          <iframe id="mapsFrame" frameborder="0" allowfullscreen loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="map-overlay"></div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /afspraak-layout -->
+</div><!-- /page-afspraak -->
+
+
+<script src="script.js"></script>
+</body>
+</html>

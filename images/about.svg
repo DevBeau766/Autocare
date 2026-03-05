@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a1f"/>
+      <stop offset="100%" stop-color="#0d0d10"/>
+    </linearGradient>
+    <radialGradient id="light1" cx="30%" cy="0%" r="60%">
+      <stop offset="0%" stop-color="#b8974a" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#floor)"/>
+  <rect width="1200" height="800" fill="url(#light1)"/>
+  <!-- garage door/wall lines -->
+  <g stroke="#1e1e26" stroke-width="2" fill="none" opacity="0.8">
+    <line x1="0" y1="0" x2="0" y2="800"/>
+    <line x1="150" y1="0" x2="150" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="450" y1="0" x2="450" y2="800"/>
+    <line x1="600" y1="0" x2="600" y2="800"/>
+    <line x1="750" y1="0" x2="750" y2="800"/>
+    <line x1="900" y1="0" x2="900" y2="800"/>
+    <line x1="1050" y1="0" x2="1050" y2="800"/>
+  </g>
+  <!-- work lift/platform -->
+  <rect x="200" y="500" width="800" height="20" fill="#141418" stroke="#252530" stroke-width="2"/>
+  <rect x="220" y="520" width="20" height="200" fill="#111115"/>
+  <rect x="960" y="520" width="20" height="200" fill="#111115"/>
+  <!-- car on lift -->
+  <g transform="translate(300, 350)">
+    <path d="M 30 120 L 50 60 Q 120 10 220 5 L 380 5 Q 480 3 530 25 L 570 60 L 580 120 Z" 
+          fill="#1c1c26" stroke="#252535" stroke-width="2"/>
+    <path d="M 95 58 Q 130 18 215 8 L 375 7 Q 460 6 505 28 L 545 58 Z" fill="#151520" opacity="0.9"/>
+    <path d="M 110 55 Q 140 22 218 10 L 330 8 L 330 54 Z" fill="#0d1520" opacity="0.8"/>
+    <path d="M 345 8 L 450 12 Q 490 20 520 40 L 520 54 L 345 54 Z" fill="#0d1520" opacity="0.8"/>
+    <circle cx="120" cy="155" r="38" fill="#0a0a0d" stroke="#b8974a" stroke-width="1.5"/>
+    <circle cx="120" cy="155" r="22" fill="#060608" stroke="#9a7a3a" stroke-width="1"/>
+    <circle cx="480" cy="155" r="38" fill="#0a0a0d" stroke="#b8974a" stroke-width="1.5"/>
+    <circle cx="480" cy="155" r="22" fill="#060608" stroke="#9a7a3a" stroke-width="1"/>
+  </g>
+  <!-- tool cabinet -->
+  <rect x="50" y="200" width="100" height="300" fill="#141418" stroke="#1e1e26" stroke-width="2" rx="3"/>
+  <rect x="60" y="220" width="80" height="40" fill="#0a0a0d" stroke="#252530" stroke-width="1" rx="2"/>
+  <rect x="60" y="270" width="80" height="40" fill="#0a0a0d" stroke="#252530" stroke-width="1" rx="2"/>
+  <rect x="60" y="320" width="80" height="40" fill="#0a0a0d" stroke="#252530" stroke-width="1" rx="2"/>
+  <circle cx="100" cy="240" r="5" fill="#b8974a" opacity="0.6"/>
+  <circle cx="100" cy="290" r="5" fill="#b8974a" opacity="0.6"/>
+  <!-- overhead lamp -->
+  <rect x="540" y="0" width="120" height="12" fill="#111115" rx="2"/>
+  <rect x="555" y="12" width="90" height="8" fill="#d4af6a" opacity="0.9"/>
+  <path d="M 555 20 L 510 160 L 690 160 L 645 20 Z" fill="#b8974a" opacity="0.03"/>
+  <!-- floor reflection -->
+  <ellipse cx="600" cy="700" rx="350" ry="30" fill="#b8974a" opacity="0.04"/>
+</svg>

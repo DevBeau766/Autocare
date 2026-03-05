@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <radialGradient id="mBg" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#141420"/>
+      <stop offset="100%" stop-color="#080809"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="600" fill="url(#mBg)"/>
+  <!-- engine bay representation -->
+  <rect x="100" y="100" width="700" height="400" rx="6" fill="#111116" stroke="#1e1e28" stroke-width="2"/>
+  <!-- engine block -->
+  <rect x="200" y="150" width="300" height="200" rx="4" fill="#161620" stroke="#222230" stroke-width="2"/>
+  <rect x="220" y="170" width="60" height="60" rx="3" fill="#0d0d14" stroke="#1a1a24" stroke-width="1.5"/>
+  <rect x="300" y="170" width="60" height="60" rx="3" fill="#0d0d14" stroke="#1a1a24" stroke-width="1.5"/>
+  <rect x="380" y="170" width="60" height="60" rx="3" fill="#0d0d14" stroke="#1a1a24" stroke-width="1.5"/>
+  <rect x="220" y="250" width="60" height="60" rx="3" fill="#0d0d14" stroke="#1a1a24" stroke-width="1.5"/>
+  <rect x="300" y="250" width="60" height="60" rx="3" fill="#0d0d14" stroke="#1a1a24" stroke-width="1.5"/>
+  <rect x="380" y="250" width="60" height="60" rx="3" fill="#0d0d14" stroke="#1a1a24" stroke-width="1.5"/>
+  <!-- pipes/hoses -->
+  <path d="M 500 200 Q 580 200 580 280 Q 580 350 650 350" stroke="#b8974a" stroke-width="6" fill="none" opacity="0.6" stroke-linecap="round"/>
+  <path d="M 200 320 Q 160 320 150 280 Q 140 250 130 240" stroke="#666680" stroke-width="5" fill="none" opacity="0.5" stroke-linecap="round"/>
+  <!-- wrench tool -->
+  <g transform="translate(580, 160) rotate(-35)">
+    <rect x="0" y="0" width="120" height="18" rx="5" fill="#2a2a35" stroke="#3a3a48" stroke-width="1.5"/>
+    <circle cx="12" cy="9" r="14" fill="#1e1e28" stroke="#b8974a" stroke-width="2"/>
+    <circle cx="12" cy="9" r="8" fill="#141418" stroke="#2a2a35" stroke-width="1"/>
+    <circle cx="108" cy="9" r="14" fill="#1e1e28" stroke="#b8974a" stroke-width="2"/>
+    <circle cx="108" cy="9" r="8" fill="#141418" stroke="#2a2a35" stroke-width="1"/>
+  </g>
+  <!-- oil drop -->
+  <circle cx="700" cy="420" r="25" fill="#b8974a" opacity="0.25"/>
+  <path d="M 700 395 Q 710 405 700 420 Q 690 405 700 395 Z" fill="#b8974a" opacity="0.4"/>
+  <!-- diagnostic screen glow -->
+  <rect x="600" y="150" width="160" height="100" rx="6" fill="#0d1520" stroke="#1a2535" stroke-width="2"/>
+  <rect x="608" y="158" width="144" height="84" rx="4" fill="#0a1018"/>
+  <text x="680" y="195" font-family="monospace" font-size="11" fill="#00cc66" text-anchor="middle">DIAGNOSE</text>
+  <text x="680" y="213" font-family="monospace" font-size="9" fill="#00aa44" text-anchor="middle">■■■■■□□ 68%</text>
+  <text x="680" y="228" font-family="monospace" font-size="8" fill="#669966" text-anchor="middle">OK ✓ MOTOR</text>
+</svg>

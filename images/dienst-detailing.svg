@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <radialGradient id="dBg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#12121a"/>
+      <stop offset="100%" stop-color="#07070a"/>
+    </radialGradient>
+    <radialGradient id="sheen" cx="40%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#d4af6a" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <filter id="glow2"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+  <rect width="900" height="600" fill="url(#dBg)"/>
+  <rect width="900" height="600" fill="url(#sheen)"/>
+  <!-- polished car hood -->
+  <path d="M 100 300 Q 150 150 400 100 L 700 110 Q 820 140 870 260 L 870 350 Q 820 400 400 410 Q 150 400 100 350 Z" 
+        fill="#151520" stroke="#1e1e2a" stroke-width="2"/>
+  <!-- paint sheen/reflection -->
+  <path d="M 150 280 Q 250 200 450 190 Q 600 185 700 210 L 680 240 Q 580 215 440 222 Q 250 232 170 310 Z" 
+        fill="white" opacity="0.04"/>
+  <path d="M 200 320 Q 300 260 500 250 Q 650 248 750 272 L 740 295 Q 640 275 498 278 Q 300 290 210 345 Z" 
+        fill="white" opacity="0.025"/>
+  <!-- polishing machine -->
+  <g transform="translate(680, 180)">
+    <rect x="0" y="0" width="80" height="50" rx="10" fill="#222230" stroke="#303045" stroke-width="2"/>
+    <circle cx="40" cy="70" r="35" fill="#1a1a25" stroke="#b8974a" stroke-width="2"/>
+    <circle cx="40" cy="70" r="25" fill="#141420" stroke="#2a2a38" stroke-width="1.5"/>
+    <circle cx="40" cy="70" r="10" fill="#b8974a" opacity="0.5"/>
+    <!-- rotation lines -->
+    <g opacity="0.3">
+      <line x1="20" y1="50" x2="60" y2="90" stroke="#b8974a" stroke-width="1"/>
+      <line x1="60" y1="50" x2="20" y2="90" stroke="#b8974a" stroke-width="1"/>
+    </g>
+  </g>
+  <!-- sparkle effects -->
+  <g fill="#d4af6a">
+    <circle cx="300" cy="200" r="2" opacity="0.8"/>
+    <circle cx="450" cy="180" r="1.5" opacity="0.6"/>
+    <circle cx="550" cy="195" r="2" opacity="0.7"/>
+    <circle cx="350" cy="220" r="1" opacity="0.5"/>
+    <circle cx="500" cy="215" r="2.5" opacity="0.6"/>
+    <circle cx="620" cy="205" r="1.5" opacity="0.4"/>
+  </g>
+  <!-- star sparkles -->
+  <g stroke="#d4af6a" stroke-width="1" fill="none" opacity="0.5">
+    <line x1="300" y1="197" x2="300" y2="203"/>
+    <line x1="297" y1="200" x2="303" y2="200"/>
+    <line x1="450" y1="177" x2="450" y2="183"/>
+    <line x1="447" y1="180" x2="453" y2="180"/>
+    <line x1="550" y1="192" x2="550" y2="198"/>
+    <line x1="547" y1="195" x2="553" y2="195"/>
+  </g>
+</svg>

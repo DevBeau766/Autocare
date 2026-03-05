@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <radialGradient id="bg" cx="60%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#1a1a20"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#b8974a" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#b8974a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="softblur"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <!-- grid -->
+  <g opacity="0.04" stroke="#c8c8d4" stroke-width="1">
+    <line x1="0" y1="113" x2="1600" y2="113"/>
+    <line x1="0" y1="226" x2="1600" y2="226"/>
+    <line x1="0" y1="339" x2="1600" y2="339"/>
+    <line x1="0" y1="452" x2="1600" y2="452"/>
+    <line x1="0" y1="565" x2="1600" y2="565"/>
+    <line x1="0" y1="678" x2="1600" y2="678"/>
+    <line x1="200" y1="0" x2="200" y2="900"/>
+    <line x1="400" y1="0" x2="400" y2="900"/>
+    <line x1="600" y1="0" x2="600" y2="900"/>
+    <line x1="800" y1="0" x2="800" y2="900"/>
+    <line x1="1000" y1="0" x2="1000" y2="900"/>
+    <line x1="1200" y1="0" x2="1200" y2="900"/>
+    <line x1="1400" y1="0" x2="1400" y2="900"/>
+  </g>
+  <!-- glow spot -->
+  <ellipse cx="960" cy="420" rx="500" ry="300" fill="url(#glow)"/>
+  <!-- car body - sporty sedan silhouette -->
+  <g transform="translate(350, 340)">
+    <!-- shadow -->
+    <ellipse cx="450" cy="295" rx="420" ry="18" fill="#000" opacity="0.6" filter="url(#softblur)"/>
+    <!-- main body -->
+    <path d="M 60 220 L 80 160 Q 180 80 320 65 L 520 60 Q 640 58 700 80 L 780 130 L 820 220 Z" 
+          fill="#1c1c22" stroke="#2e2e38" stroke-width="2"/>
+    <!-- roof -->
+    <path d="M 160 155 Q 200 95 300 75 L 520 70 Q 620 68 680 90 L 730 130 L 160 155 Z" 
+          fill="#161618" stroke="#2a2a32" stroke-width="1.5"/>
+    <!-- windows -->
+    <path d="M 200 148 Q 230 100 310 82 L 430 78 L 430 145 Z" fill="#1a2535" opacity="0.9"/>
+    <path d="M 445 78 L 560 82 Q 620 90 660 120 L 660 145 L 445 145 Z" fill="#1a2535" opacity="0.9"/>
+    <!-- window divider -->
+    <line x1="435" y1="78" x2="440" y2="148" stroke="#0a0a0f" stroke-width="5"/>
+    <!-- door lines -->
+    <line x1="310" y1="150" x2="305" y2="220" stroke="#252530" stroke-width="2"/>
+    <line x1="530" y1="148" x2="530" y2="220" stroke="#252530" stroke-width="2"/>
+    <!-- body crease line -->
+    <path d="M 80 185 Q 300 175 530 175 L 780 185" stroke="#b8974a" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <!-- front wheel arch -->
+    <path d="M 60 220 Q 65 260 120 270 Q 200 280 240 260 Q 280 240 270 220 Z" fill="#111115"/>
+    <circle cx="165" cy="262" r="52" fill="#0d0d10" stroke="#1e1e24" stroke-width="3"/>
+    <circle cx="165" cy="262" r="38" fill="#111115" stroke="#2a2a35" stroke-width="2"/>
+    <circle cx="165" cy="262" r="22" fill="#0a0a0d" stroke="#b8974a" stroke-width="1.5"/>
+    <!-- front wheel spokes -->
+    <line x1="165" y1="240" x2="165" y2="284" stroke="#b8974a" stroke-width="1.5" opacity="0.7"/>
+    <line x1="143" y1="262" x2="187" y2="262" stroke="#b8974a" stroke-width="1.5" opacity="0.7"/>
+    <line x1="149" y1="246" x2="181" y2="278" stroke="#b8974a" stroke-width="1.5" opacity="0.5"/>
+    <line x1="181" y1="246" x2="149" y2="278" stroke="#b8974a" stroke-width="1.5" opacity="0.5"/>
+    <!-- rear wheel arch -->
+    <path d="M 620 220 Q 625 260 680 270 Q 760 280 800 260 Q 830 240 820 220 Z" fill="#111115"/>
+    <circle cx="715" cy="262" r="52" fill="#0d0d10" stroke="#1e1e24" stroke-width="3"/>
+    <circle cx="715" cy="262" r="38" fill="#111115" stroke="#2a2a35" stroke-width="2"/>
+    <circle cx="715" cy="262" r="22" fill="#0a0a0d" stroke="#b8974a" stroke-width="1.5"/>
+    <line x1="715" y1="240" x2="715" y2="284" stroke="#b8974a" stroke-width="1.5" opacity="0.7"/>
+    <line x1="693" y1="262" x2="737" y2="262" stroke="#b8974a" stroke-width="1.5" opacity="0.7"/>
+    <line x1="699" y1="246" x2="731" y2="278" stroke="#b8974a" stroke-width="1.5" opacity="0.5"/>
+    <line x1="731" y1="246" x2="699" y2="278" stroke="#b8974a" stroke-width="1.5" opacity="0.5"/>
+    <!-- headlight -->
+    <path d="M 62 195 Q 65 175 85 168 L 120 165 L 118 195 Z" fill="#d4af6a" opacity="0.8"/>
+    <path d="M 62 195 Q 65 175 85 168 L 120 165 L 118 195 Z" fill="none" stroke="#b8974a" stroke-width="1"/>
+    <!-- taillight -->
+    <rect x="793" y="168" width="28" height="32" rx="3" fill="#c0392b" opacity="0.7"/>
+    <rect x="793" y="168" width="28" height="32" rx="3" fill="none" stroke="#e74c3c" stroke-width="1"/>
+  </g>
+  <!-- floor reflection line -->
+  <line x1="200" y1="640" x2="1400" y2="640" stroke="#b8974a" stroke-width="1" opacity="0.12"/>
+  <!-- subtle light streak -->
+  <line x1="0" y1="0" x2="1600" y2="900" stroke="#c8c8d4" stroke-width="0.5" opacity="0.03"/>
+</svg>

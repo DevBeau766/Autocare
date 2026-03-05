@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <linearGradient id="cBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10101a"/>
+      <stop offset="100%" stop-color="#080810"/>
+    </linearGradient>
+    <filter id="metalBlur"><feGaussianBlur stdDeviation="2"/></filter>
+  </defs>
+  <rect width="900" height="600" fill="url(#cBg)"/>
+  <!-- car door panel with dent -->
+  <rect x="120" y="120" width="450" height="360" rx="12" fill="#141420" stroke="#1e1e2c" stroke-width="2"/>
+  <!-- panel surface -->
+  <rect x="130" y="130" width="430" height="340" rx="8" fill="#111118"/>
+  <!-- dent/damage area -->
+  <path d="M 250 250 Q 290 230 340 245 Q 370 255 365 285 Q 358 310 320 315 Q 280 318 255 300 Q 235 280 250 250 Z" 
+        fill="#0d0d16" stroke="#252535" stroke-width="1.5"/>
+  <!-- dent depth shadow -->
+  <path d="M 265 260 Q 300 245 335 258 Q 355 267 350 288 Q 344 305 315 308 Q 285 310 265 295 Q 248 278 265 260 Z"
+        fill="#080810"/>
+  <!-- repair tools -->
+  <g transform="translate(620, 150)">
+    <!-- slide hammer -->
+    <rect x="0" y="0" width="15" height="200" rx="4" fill="#1e1e28" stroke="#2a2a38" stroke-width="1.5"/>
+    <rect x="-15" y="80" width="45" height="25" rx="4" fill="#b8974a" opacity="0.7"/>
+    <rect x="-10" y="195" width="35" height="20" rx="3" fill="#222230" stroke="#333345" stroke-width="1"/>
+  </g>
+  <!-- before/after light line -->
+  <line x1="345" y1="130" x2="345" y2="470" stroke="#b8974a" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.3"/>
+  <!-- repaired side hint -->
+  <path d="M 360 250 Q 400 240 430 255 Q 450 262 448 278 Q 445 295 420 298 Q 395 300 375 288 Q 358 272 360 250 Z"
+        fill="#16161e" stroke="#b8974a" stroke-width="1" opacity="0.5"/>
+  <!-- measurement lines -->
+  <line x1="130" y1="470" x2="560" y2="470" stroke="#333345" stroke-width="1" opacity="0.5"/>
+  <line x1="130" y1="465" x2="130" y2="475" stroke="#b8974a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="560" y1="465" x2="560" y2="475" stroke="#b8974a" stroke-width="1.5" opacity="0.5"/>
+</svg>
